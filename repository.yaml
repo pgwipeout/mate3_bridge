@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: Outback Power Mate3 data stream add-on for Home Assistant
+url: 'https://github.com/pgwipeout/mate3_bridge'
+maintainer: Peter Geis <pgwipeout@gmail.com>
