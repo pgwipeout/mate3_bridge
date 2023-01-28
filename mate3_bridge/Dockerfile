@@ -5,6 +5,11 @@ FROM ${BUILD_FROM} as builder
 # Copy root filesystem
 COPY rootfs /
 RUN \
-    chmod a+x /run.sh
+    pip install \
+        --no-cache-dir \
+        --prefer-binary \
+        paho-mqtt \
+    \
+    && chmod a+x /run.sh
 
-CMD {"/run.sh"}
+CMD "/run.sh"
