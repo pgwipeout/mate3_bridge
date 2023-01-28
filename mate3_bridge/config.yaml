@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Outback Power Mate3 data stream bridge
-version: "0.1.0"
+version: "main"
 slug: mate3_bridge
 description: Outback Power Mate3 data stream add-on for Home Assistant
 url: "https://github.com/pgwipeout/mate3-bridge"
@@ -11,19 +11,27 @@ arch:
   - amd64
   - i386
 init: false
-map:
-  - share:rw
 options:
   debug: false
   interface: "0.0.0.0"
   port: 57027
+  mqtt_host: "127.0.0.1"
+  mqtt_port: 1883
+  mqtt_username: ""
+  mqtt_password: ""
+  discovery: "homeassistant"
 ports:
   57027/udp: 57027
 schema:
   debug: bool
   interface: str?
   port: int?
-image: "ghcr.io/home-assistant/{arch}-addon-example"
+  mqtt_host: str?
+  mqtt_port: int?
+  mqtt_username: str?
+  mqtt_password: str?
+  discovery: str?
+#image: "ghcr.io/pgwipeout/mate3_bridge-{arch}"
 startup: "application"
 boot: "auto"
 
