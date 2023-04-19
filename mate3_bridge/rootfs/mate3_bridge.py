@@ -209,7 +209,6 @@ radian_mappings = {
         "config": {
             "device_class": "enum",
             "name": "Inverter Operating Mode",
-            "state_class": "measurement",
             "entity_category": "diagnostic",
             "options": [
                 "Inverter Off",
@@ -238,7 +237,6 @@ radian_mappings = {
         "config": {
             "device_class": "enum",
             "name": "Inverter Error State",
-            "state_class": "measurement",
             "entity_category": "diagnostic",
         }
     },
@@ -248,7 +246,6 @@ radian_mappings = {
         "config": {
             "device_class": "enum",
             "name": "Inverter AC Mode",
-            "state_class": "measurement",
             "entity_category": "diagnostic",
             "options": ["No AC Available", "AC Invalid", "AC In Use"],
         }
