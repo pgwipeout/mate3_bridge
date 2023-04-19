@@ -655,7 +655,6 @@ def radian_bridge():
         logging.info("port %s" %args.relayport)
         relayhost = (args.relayhost, args.relayport)
 
-
     if args.username != None:
         mqttc.username_pw_set(args.username, password=args.password)
     if MQTT_TLS:
@@ -667,9 +666,14 @@ def radian_bridge():
 
     while True:
         data, addr = sock.recvfrom(1024)
-        logging.debug("received message: %s" % data)
+        logging.info("received message: %s" % data)
         if args.relay:
-            sock.sendto(data, relayhost)
+            try:
+                logging.info("Forwarding message: %s" %data)
+                sock.sendto(data, relayhost)
+            except:
+                logging.info("Forwarding connection failed")
+
         data = "% s" % data
         mac = data.split('[')[1]
         mac = mac.split(']')[0]
