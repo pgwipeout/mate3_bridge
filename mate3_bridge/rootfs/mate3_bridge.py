@@ -650,6 +650,11 @@ def radian_bridge():
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
     sock.bind((args.interface, args.port))
 
+    if args.relay:
+        logging.info("Enabling relay to %s" %args.relayhost)
+        logging.info("port %s" %args.relayport)
+        relayhost = (args.relayhost, args.relayport)
+
 
     if args.username != None:
         mqttc.username_pw_set(args.username, password=args.password)
@@ -663,6 +668,8 @@ def radian_bridge():
     while True:
         data, addr = sock.recvfrom(1024)
         logging.debug("received message: %s" % data)
+        if args.relay:
+            sock.sendto(data, relayhost)
         data = "% s" % data
         mac = data.split('[')[1]
         mac = mac.split(']')[0]
@@ -703,6 +710,11 @@ if __name__ == "__main__":
                         help="MQTT Password (default: %(default)s)")
     parser.add_argument("-D", "--discovery", type=str, default="homeassistant",
                         help="Homeassistant MQTT discovery prefix (default: %(default)s)")
+    parser.add_argument("-r", "--relay", action="store_true")
+    parser.add_argument("-R", "--relayhost", type=str, default="0.0.0.0",
+                        help="Address to transmit relay packets to (default: %(default)s)")
+    parser.add_argument("-I", "--relayport", type=int, default=57027,
+                        help="Port to transmit relay packets to (default: %(default)s)")
     args = parser.parse_args()
 
     if args.debug:
