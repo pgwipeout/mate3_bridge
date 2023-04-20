@@ -903,7 +903,7 @@ def radianProcessData(data, mac):
     logging.debug("AC mode: %s" %data[18])
     logging.debug("Battery Voltage: %s VDC" %data[19])
     logging.debug("Misc: %s" %radianMiscConv(data[20]))
-    logging.debug("Warnings: %s" %radianWarningConv(data[21])
+    logging.debug("Warnings: %s" %radianWarningConv(data[21]))
 
     path = "/".join([MQTT_PREFIX, data[0] + "-" + data[1].replace(" ", "_")])
 
