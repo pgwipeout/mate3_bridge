@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Outback Power Mate3 data stream bridge
-version: "0.1.7"
+version: "0.1.8"
 slug: mate3_bridge
 description: Outback Power Mate3 data stream add-on for Home Assistant
 url: "https://github.com/pgwipeout/mate3-bridge"
