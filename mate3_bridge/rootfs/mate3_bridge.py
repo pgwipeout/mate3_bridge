@@ -33,11 +33,8 @@ radian_keys = {
     'l2_gen_input_v',
     'l2_output_v',
     'inverter_mode',
-    'inverter_err',
     'ac_mode',
     'battery_v',
-    'misc',
-    'inverter_warn',
 
     "l1_inv_w",
     "l1_chg_w",
