@@ -54,7 +54,26 @@ radian_keys = {
     "inv_err_batt_low",
     "inv_err_comm",
     "inv_err_batt_high",
+    "inv_err_ac_short",
     "inv_err_backfeed",
+
+    "inv_warn_ac_in_freq_high",
+    "inv_warn_ac_in_freq_low",
+    "inv_warn_ac_in_volt_high",
+    "inv_warn_ac_in_volt_low",
+    "inv_warn_buy_amp_overload",
+    "inv_warn_temp_sensor_failed",
+    "inv_warn_phase_loss",
+    "inv_warn_fan_failed",
+
+    "inv_misc_res_1",
+    "inv_misc_res_2",
+    "inv_misc_res_4",
+    "inv_misc_res_8",
+    "inv_misc_aux_enabled",
+    "inv_misc_relay_enabled",
+    "inv_misc_ac_select",
+    "inv_misc_volt_mode",
 }
 
 radian_mappings = {
@@ -255,16 +274,6 @@ radian_mappings = {
         }
     },
 
-    "inverter_err": {
-        "object_id": "inverter_err",
-        "sensor_type": "sensor",
-        "config": {
-            "device_class": "enum",
-            "name": "Inverter Error State",
-            "entity_category": "diagnostic",
-        }
-    },
-
     "ac_mode": {
         "object_id": "ac_mode",
         "sensor_type": "sensor",
@@ -285,28 +294,6 @@ radian_mappings = {
             "unit_of_measurement": "V",
             "value_template": "{{ value|float }}",
             "state_class": "measurement",
-        }
-    },
-
-    "misc": {
-        "object_id": "misc",
-        "sensor_type": "sensor",
-        "config": {
-            "device_class": "enum",
-            "name": "Inverter Misc Status",
-            "state_class": "measurement",
-            "entity_category": "diagnostic",
-        }
-    },
-
-    "inverter_warn": {
-        "object_id": "inverter_warn",
-        "sensor_type": "sensor",
-        "config": {
-            "device_class": "enum",
-            "name": "Inverter Warning Status",
-            "state_class": "measurement",
-            "entity_category": "diagnostic",
         }
     },
 
@@ -411,7 +398,7 @@ radian_mappings = {
         "sensor_type": "binary_sensor",
         "config": {
             "device_class": "problem",
-            "name": "Inverter AC Output Low Error",
+            "name": "Error AC Output Low",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
         }
@@ -422,7 +409,7 @@ radian_mappings = {
         "sensor_type": "binary_sensor",
         "config": {
             "device_class": "problem",
-            "name": "Inverter Stacking Error",
+            "name": "Error Stacking",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
         }
@@ -433,7 +420,7 @@ radian_mappings = {
         "sensor_type": "binary_sensor",
         "config": {
             "device_class": "problem",
-            "name": "Inverter Overtemp Error",
+            "name": "Error Overtemp",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
         }
@@ -444,7 +431,7 @@ radian_mappings = {
         "sensor_type": "binary_sensor",
         "config": {
             "device_class": "problem",
-            "name": "Inverter Battery Voltage Low Error",
+            "name": "Error Battery Voltage Low",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
         }
@@ -455,7 +442,7 @@ radian_mappings = {
         "sensor_type": "binary_sensor",
         "config": {
             "device_class": "problem",
-            "name": "Inverter Communication Fault Error",
+            "name": "Error Communication Fault",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
         }
@@ -466,7 +453,7 @@ radian_mappings = {
         "sensor_type": "binary_sensor",
         "config": {
             "device_class": "problem",
-            "name": "Inverter Battery Voltage High Error",
+            "name": "Error Battery Voltage High",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
         }
@@ -477,7 +464,7 @@ radian_mappings = {
         "sensor_type": "binary_sensor",
         "config": {
             "device_class": "problem",
-            "name": "Inverter AC Output Short Error",
+            "name": "Error AC Output Short",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
         }
@@ -488,9 +475,188 @@ radian_mappings = {
         "sensor_type": "binary_sensor",
         "config": {
             "device_class": "problem",
-            "name": "Inverter Backfeed Error",
+            "name": "Error Backfeed",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
+        }
+    },
+
+    "inv_warn_ac_in_freq_high": {
+        "object_id": "inv_warn_ac_in_freq_high",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Warn AC Input Freq High",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+
+    "inv_warn_ac_in_freq_low": {
+        "object_id": "inv_warn_ac_in_freq_low",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Warn AC Input Freq Low",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+
+    "inv_warn_ac_in_volt_high": {
+        "object_id": "inv_warn_ac_in_volt_high",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Warn AC Input Voltage High",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+
+    "inv_warn_ac_in_volt_low": {
+        "object_id": "inv_warn_ac_in_volt_low",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Warn AC Input Voltage Low",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+    
+    "inv_warn_buy_amp_overload": {
+        "object_id": "inv_warn_buy_amp_overload",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Warn Buy Amperage Overload",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+
+    "inv_warn_temp_sensor_failed": {
+        "object_id": "inv_warn_temp_sensor_failed",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Warn Temp Sensor Failed",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+    
+    "inv_warn_phase_loss": {
+        "object_id": "inv_warn_phase_loss",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Warn Phase Loss",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+    
+    "inv_warn_fan_failed": {
+        "object_id": "inv_warn_fan_failed",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Warn Fan Failed",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+
+
+    "inv_misc_res_1": {
+        "object_id": "inv_misc_res_1",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "None",
+            "name": "Misc Reserved 1",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+
+    "inv_misc_res_2": {
+        "object_id": "inv_misc_res_2",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "None",
+            "name": "Misc Reserved 2",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+
+    "inv_misc_res_4": {
+        "object_id": "inv_misc_res_4",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "None",
+            "name": "Misc Reserved 4",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+
+    "inv_misc_res_8": {
+        "object_id": "inv_misc_res_8",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "None",
+            "name": "Misc Reserved 8",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+    
+    "inv_misc_aux_enabled": {
+        "object_id": "inv_misc_aux_enabled",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "None",
+            "name": "Misc Aux Relay Enabled",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+
+    "inv_misc_relay_enabled": {
+        "object_id": "inv_misc_relay_enabled",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "None",
+            "name": "Misc Relay Enabled",
+            "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
+            "entity_category": "diagnostic",
+        }
+    },
+    
+    "inv_misc_ac_select": {
+        "object_id": "inv_misc_ac_select",
+        "sensor_type": "sensor",
+        "config": {
+            "device_class": "enum",
+            "name": "Misc AC Select",
+            "value_template": "{%if value == '1' %} "AC 1 Selected" {% else %} "AC 2 Selected" {% endif %}",
+            "entity_category": "diagnostic",
+            "options": ["AC 1 Selected", "AC 2 Selected"],
+        }
+    },
+    
+    "inv_misc_volt_mode": {
+        "object_id": "inv_misc_volt_mode",
+        "sensor_type": "sensor",
+        "config": {
+            "device_class": "enum",
+            "name": "Misc Voltage Mode",
+            "value_template": "{%if value == '1' %} "240 VAC Mode" {% else %} "120 VAC Mode" {% endif %}",
+            "entity_category": "diagnostic",
+            "options": ["240 VAC Mode", "120 VAC Mode"],
         }
     },
 }
@@ -700,11 +866,7 @@ def radianProcessData(data, mac):
     data[0] = "port_" + data[0]
     data[1] = radianDeviceType(data[1])
     data[16] = radianModeConv(data[16])
- #   data[17] = radianErrorConv(data[17])
-    temp_err = radianErrorConv(data[17])
     data[18] = radianACModeConv(data[18])
-    data[20] = radianMiscConv(data[20])
-    data[21] = radianWarningConv(data[21])
 
     logging.debug("port: %s" %data[0])
     logging.debug("devtype: %s" %data[1])
@@ -723,12 +885,11 @@ def radianProcessData(data, mac):
     logging.debug("L2 Gen Input Voltage: %s VAC" %data[14])
     logging.debug("L2 Output Voltage: %s VAC" %data[15])
     logging.debug("Inverter Mode: %s" %data[16])
-#    logging.debug("Error: %s" %data[17])
-    logging.debug("Error: %s" %temp_err)
+    logging.debug("Error: %s" %radianErrorConv(data[17]))
     logging.debug("AC mode: %s" %data[18])
     logging.debug("Battery Voltage: %s VDC" %data[19])
-    logging.debug("Misc: %s" %data[20])
-    logging.debug("Warnings: %s" %data[21])
+    logging.debug("Misc: %s" %radianMiscConv(data[20]))
+    logging.debug("Warnings: %s" %radianWarningConv(data[21])
 
     path = "/".join([MQTT_PREFIX, data[0] + "-" + data[1].replace(" ", "_")])
 
@@ -749,7 +910,6 @@ def radianProcessData(data, mac):
     mqttc.publish(path +"/l2_gen_input_v", data[14])
     mqttc.publish(path +"/l2_output_v", data[15])
     mqttc.publish(path +"/inverter_mode", data[16])
-    mqttc.publish(path +"/inverter_err", temp_err)
     mqttc.publish(path +"/ac_mode", data[18])
     mqttc.publish(path +"/battery_v", data[19])
     mqttc.publish(path +"/misc", data[20])
@@ -772,6 +932,24 @@ def radianProcessData(data, mac):
     mqttc.publish(path +"/inv_err_batt_high", int(int(data[17]) & 0b00100000))
     mqttc.publish(path +"/inv_err_ac_short", int(int(data[17]) & 0b01000000))
     mqttc.publish(path +"/inv_err_backfeed", int(int(data[17]) & 0b10000000))
+
+    mqttc.publish(path +"/inv_warn_ac_in_freq_high", int(int(data[21]) & 0b00000001))
+    mqttc.publish(path +"/inv_warn_ac_in_freq_low", int(int(data[21]) & 0b00000010))
+    mqttc.publish(path +"/inv_warn_ac_in_volt_high", int(int(data[21]) & 0b00000100))
+    mqttc.publish(path +"/inv_warn_ac_in_volt_low", int(int(data[21]) & 0b00001000))
+    mqttc.publish(path +"/inv_warn_buy_amp_overload", int(int(data[21]) & 0b00010000))
+    mqttc.publish(path +"/inv_warn_temp_sensor_failed", int(int(data[21]) & 0b00100000))
+    mqttc.publish(path +"/inv_warn_phase_loss", int(int(data[21]) & 0b01000000))
+    mqttc.publish(path +"/inv_warn_fan_failed", int(int(data[21]) & 0b10000000))
+
+    mqttc.publish(path +"/inv_misc_res_1", int(int(data[20]) & 0b00000001))
+    mqttc.publish(path +"/inv_misc_res_2", int(int(data[20]) & 0b00000010))
+    mqttc.publish(path +"/inv_misc_res_4", int(int(data[20]) & 0b00000100))
+    mqttc.publish(path +"/inv_misc_res_8", int(int(data[20]) & 0b00001000))
+    mqttc.publish(path +"/inv_misc_aux_enabled", int(int(data[20]) & 0b00010000))
+    mqttc.publish(path +"/inv_misc_relay_enabled", int(int(data[20]) & 0b00100000))
+    mqttc.publish(path +"/inv_misc_ac_select", int(int(data[20]) & 0b01000000))
+    mqttc.publish(path +"/inv_misc_volt_mode", int(int(data[20]) & 0b10000000))
 
 MQTT_TLS = False
 MQTT_PREFIX = "mate3"
