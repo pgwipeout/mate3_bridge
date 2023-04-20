@@ -412,7 +412,7 @@ radian_mappings = {
         "config": {
             "device_class": "problem",
             "name": "Inverter AC Output Low Error",
-            "value_template": "{{ value }}",
+            "value_template": "{{ value | bool }}",
             "entity_category": "diagnostic",
         }
     },
@@ -423,7 +423,7 @@ radian_mappings = {
         "config": {
             "device_class": "problem",
             "name": "Inverter Stacking Error",
-            "value_template": "{{ value }}",
+            "value_template": "{{ value | bool }}",
             "entity_category": "diagnostic",
         }
     },
@@ -434,7 +434,7 @@ radian_mappings = {
         "config": {
             "device_class": "problem",
             "name": "Inverter Overtemp Error",
-            "value_template": "{{ value }}",
+            "value_template": "{{ value | bool }}",
             "entity_category": "diagnostic",
         }
     },
@@ -445,7 +445,7 @@ radian_mappings = {
         "config": {
             "device_class": "problem",
             "name": "Inverter Battery Voltage Low Error",
-            "value_template": "{{ value }}",
+            "value_template": "{{ value | bool }}",
             "entity_category": "diagnostic",
         }
     },
@@ -456,7 +456,7 @@ radian_mappings = {
         "config": {
             "device_class": "problem",
             "name": "Inverter Communication Fault Error",
-            "value_template": "{{ value }}",
+            "value_template": "{{ value | bool }}",
             "entity_category": "diagnostic",
         }
     },
@@ -467,7 +467,7 @@ radian_mappings = {
         "config": {
             "device_class": "problem",
             "name": "Inverter Battery Voltage High Error",
-            "value_template": "{{ value }}",
+            "value_template": "{{ value | bool }}",
             "entity_category": "diagnostic",
         }
     },
@@ -478,7 +478,7 @@ radian_mappings = {
         "config": {
             "device_class": "problem",
             "name": "Inverter AC Output Short Error",
-            "value_template": "{{ value }}",
+            "value_template": "{{ value | bool }}",
             "entity_category": "diagnostic",
         }
     },
@@ -489,7 +489,7 @@ radian_mappings = {
         "config": {
             "device_class": "problem",
             "name": "Inverter Backfeed Error",
-            "value_template": "{{ value }}",
+            "value_template": "{{ value | bool }}",
             "entity_category": "diagnostic",
         }
     },
