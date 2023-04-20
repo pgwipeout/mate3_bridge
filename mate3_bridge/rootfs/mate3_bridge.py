@@ -52,6 +52,7 @@ radian_keys = {
 radian_mappings = {
     "l1_inv_a": {
         "object_id": "l1_inv_a",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "current",
             "name": "L1 Inverter Current",
@@ -63,6 +64,7 @@ radian_mappings = {
 
     "l1_chg_a": {
         "object_id": "l1_chg_a",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "current",
             "name": "L1 Charger Current",
@@ -74,6 +76,7 @@ radian_mappings = {
 
     "l1_buy_a": {
         "object_id": "l1_buy_a",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "current",
             "name": "L1 Buying Current",
@@ -85,6 +88,7 @@ radian_mappings = {
 
     "l1_sell_a": {
         "object_id": "l1_sell_a",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "current",
             "name": "L1 Selling Current",
@@ -96,6 +100,7 @@ radian_mappings = {
 
     "l1_grid_input_v": {
         "object_id": "l1_grid_input_v",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "voltage",
             "name": "L1 Grid Voltage",
@@ -107,6 +112,7 @@ radian_mappings = {
 
     "l1_gen_input_v": {
         "object_id": "l1_gen_input_v",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "voltage",
             "name": "L1 Generator Voltage",
@@ -118,6 +124,7 @@ radian_mappings = {
 
     "l1_output_v": {
         "object_id": "l1_output_v",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "voltage",
             "name": "L1 Output Voltage",
@@ -129,6 +136,7 @@ radian_mappings = {
 
     "l2_inv_a": {
         "object_id": "l2_inv_a",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "current",
             "name": "L2 Inverter Current",
@@ -140,6 +148,7 @@ radian_mappings = {
 
     "l2_chg_a": {
         "object_id": "l2_chg_a",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "current",
             "name": "L2 Charger Current",
@@ -151,6 +160,7 @@ radian_mappings = {
 
     "l2_buy_a": {
         "object_id": "l2_buy_a",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "current",
             "name": "L2 Buying Current",
@@ -162,6 +172,7 @@ radian_mappings = {
 
     "l2_selling_a": {
         "object_id": "l2_selling_a",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "current",
             "name": "L2 Selling Current",
@@ -173,6 +184,7 @@ radian_mappings = {
 
     "l2_grid_input_v": {
         "object_id": "l2_grid_input_v",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "current",
             "name": "L2 Grid Voltage",
@@ -184,6 +196,7 @@ radian_mappings = {
 
     "l2_gen_input_v": {
         "object_id": "l2_gen_input_v",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "voltage",
             "name": "L2 Generator Voltage",
@@ -195,6 +208,7 @@ radian_mappings = {
 
     "l2_output_v": {
         "object_id": "l2_output_v",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "voltage",
             "name": "L2 Output Voltage",
@@ -206,6 +220,7 @@ radian_mappings = {
 
     "inverter_mode": {
         "object_id": "inverter_mode",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "enum",
             "name": "Inverter Operating Mode",
@@ -234,6 +249,7 @@ radian_mappings = {
 
     "inverter_err": {
         "object_id": "inverter_err",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "enum",
             "name": "Inverter Error State",
@@ -243,6 +259,7 @@ radian_mappings = {
 
     "ac_mode": {
         "object_id": "ac_mode",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "enum",
             "name": "Inverter AC Mode",
@@ -253,6 +270,7 @@ radian_mappings = {
 
     "battery_v": {
         "object_id": "battery_v",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "voltage",
             "name": "Battery Voltage",
@@ -264,6 +282,7 @@ radian_mappings = {
 
     "misc": {
         "object_id": "misc",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "enum",
             "name": "Inverter Misc Status",
@@ -274,6 +293,7 @@ radian_mappings = {
 
     "inverter_warn": {
         "object_id": "inverter_warn",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "enum",
             "name": "Inverter Warning Status",
@@ -284,6 +304,7 @@ radian_mappings = {
 
     "l1_inv_w": {
         "object_id": "l1_inv_w",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "power",
             "name": "L1 Inverter Wattage",
@@ -295,6 +316,7 @@ radian_mappings = {
 
     "l1_chg_w": {
         "object_id": "l1_chg_w",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "power",
             "name": "L1 Charger Wattage",
@@ -306,6 +328,7 @@ radian_mappings = {
 
     "l1_buy_w": {
         "object_id": "l1_buy_w",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "power",
             "name": "L1 Buying Wattage",
@@ -317,6 +340,7 @@ radian_mappings = {
 
     "l1_sell_w": {
         "object_id": "l1_sell_w",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "power",
             "name": "L1 Selling Wattage",
@@ -328,6 +352,7 @@ radian_mappings = {
 
     "l2_inv_w": {
         "object_id": "l2_inv_w",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "power",
             "name": "L2 Inverter Wattage",
@@ -339,6 +364,7 @@ radian_mappings = {
 
     "l2_chg_w": {
         "object_id": "l2_chg_w",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "power",
             "name": "L2 Charger Wattage",
@@ -350,6 +376,7 @@ radian_mappings = {
 
     "l2_buy_w": {
         "object_id": "l2_buy_w",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "power",
             "name": "L2 Buying Wattage",
@@ -361,12 +388,101 @@ radian_mappings = {
 
     "l2_sell_w": {
         "object_id": "l2_sell_w",
+        "sensor_type": "sensor",
         "config": {
             "device_class": "power",
             "name": "L2 Selling Wattage",
             "unit_of_measurement": "W",
             "value_template": "{{ value }}",
             "state_class": "measurement",
+        }
+    },
+
+    "inv_err_ac_low": {
+        "object_id": "inv_err_ac_low",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Inverter AC Output Low Error",
+            "value_template": "{{ value }}",
+            "entity_category": "diagnostic",
+        }
+    },
+
+    "inv_err_stack": {
+        "object_id": "inv_err_stack",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Inverter Stacking Error",
+            "value_template": "{{ value }}",
+            "entity_category": "diagnostic",
+        }
+    },
+
+    "inv_err_overtemp": {
+        "object_id": "inv_err_overtemp",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Inverter Overtemp Error",
+            "value_template": "{{ value }}",
+            "entity_category": "diagnostic",
+        }
+    },
+
+    "inv_err_batt_low": {
+        "object_id": "inv_err_batt_low",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Inverter Battery Voltage Low Error",
+            "value_template": "{{ value }}",
+            "entity_category": "diagnostic",
+        }
+    },
+    
+    "inv_err_comm": {
+        "object_id": "inv_err_comm",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Inverter Communication Fault Error",
+            "value_template": "{{ value }}",
+            "entity_category": "diagnostic",
+        }
+    },
+
+    "inv_err_batt_high": {
+        "object_id": "inv_err_batt_high",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Inverter Battery Voltage High Error",
+            "value_template": "{{ value }}",
+            "entity_category": "diagnostic",
+        }
+    },
+    
+    "inv_err_ac_short": {
+        "object_id": "inv_err_ac_short",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Inverter AC Output Short Error",
+            "value_template": "{{ value }}",
+            "entity_category": "diagnostic",
+        }
+    },
+    
+    "inv_err_backfeed": {
+        "object_id": "inv_err_backfeed",
+        "sensor_type": "binary_sensor",
+        "config": {
+            "device_class": "problem",
+            "name": "Inverter Backfeed Error",
+            "value_template": "{{ value }}",
+            "entity_category": "diagnostic",
         }
     },
 }
@@ -390,7 +506,8 @@ def publish_config(port, device, uuid, mappings, keys):
     for key in keys:
         mapping = mappings[key]
         object_id = mapping["object_id"]
-        path = "/".join([args.discovery, "sensor", port + "-" + device, object_id, "config"])
+        sensor_type = mapping["sensor_type"]
+        path = "/".join([args.discovery, sensor_type, port + "-" + device, object_id, "config"])
 
         config = mapping["config"].copy()
 
@@ -575,7 +692,8 @@ def radianProcessData(data, mac):
     data[0] = "port_" + data[0]
     data[1] = radianDeviceType(data[1])
     data[16] = radianModeConv(data[16])
-    data[17] = radianErrorConv(data[17])
+ #   data[17] = radianErrorConv(data[17])
+    temp_err = radianErrorConv(data[17])
     data[18] = radianACModeConv(data[18])
     data[20] = radianMiscConv(data[20])
     data[21] = radianWarningConv(data[21])
@@ -597,7 +715,8 @@ def radianProcessData(data, mac):
     logging.debug("L2 Gen Input Voltage: %s VAC" %data[14])
     logging.debug("L2 Output Voltage: %s VAC" %data[15])
     logging.debug("Inverter Mode: %s" %data[16])
-    logging.debug("Error: %s" %data[17])
+#    logging.debug("Error: %s" %data[17])
+    logging.debug("Error: %s" %temp_err)
     logging.debug("AC mode: %s" %data[18])
     logging.debug("Battery Voltage: %s VDC" %data[19])
     logging.debug("Misc: %s" %data[20])
@@ -622,7 +741,7 @@ def radianProcessData(data, mac):
     mqttc.publish(path +"/l2_gen_input_v", data[14])
     mqttc.publish(path +"/l2_output_v", data[15])
     mqttc.publish(path +"/inverter_mode", data[16])
-    mqttc.publish(path +"/inverter_err", data[17])
+    mqttc.publish(path +"/inverter_err", temp_err)
     mqttc.publish(path +"/ac_mode", data[18])
     mqttc.publish(path +"/battery_v", data[19])
     mqttc.publish(path +"/misc", data[20])
@@ -636,6 +755,15 @@ def radianProcessData(data, mac):
     mqttc.publish(path +"/l2_chg_w", int(data[10]) * int(data[15]))
     mqttc.publish(path +"/l2_buy_w", int(data[11]) * int(data[15]))
     mqttc.publish(path +"/l2_sell_w", int(data[12]) * int(data[15]))
+
+    mqttc.publish(path +"/inv_err_ac_low", int(int(data[17]) & 0b00000001))
+    mqttc.publish(path +"/inv_err_stack", int(int(data[17]) & 0b00000010))
+    mqttc.publish(path +"/inv_err_overtemp", int(int(data[17]) & 0b00000100))
+    mqttc.publish(path +"/inv_err_batt_low", int(int(data[17]) & 0b00001000))
+    mqttc.publish(path +"/inv_err_comm", int(int(data[17]) & 0b00010000))
+    mqttc.publish(path +"/inv_err_batt_high", int(int(data[17]) & 0b00100000))
+    mqttc.publish(path +"/inv_err_ac_short", int(int(data[17]) & 0b01000000))
+    mqttc.publish(path +"/inv_err_backfeed", int(int(data[17]) & 0b10000000))
 
 MQTT_TLS = False
 MQTT_PREFIX = "mate3"
