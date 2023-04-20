@@ -571,7 +571,6 @@ radian_mappings = {
         "object_id": "inv_misc_res_1",
         "sensor_type": "binary_sensor",
         "config": {
-            "device_class": "None",
             "name": "Misc Reserved 1",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
@@ -582,7 +581,6 @@ radian_mappings = {
         "object_id": "inv_misc_res_2",
         "sensor_type": "binary_sensor",
         "config": {
-            "device_class": "None",
             "name": "Misc Reserved 2",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
@@ -593,7 +591,6 @@ radian_mappings = {
         "object_id": "inv_misc_res_4",
         "sensor_type": "binary_sensor",
         "config": {
-            "device_class": "None",
             "name": "Misc Reserved 4",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
@@ -604,7 +601,6 @@ radian_mappings = {
         "object_id": "inv_misc_res_8",
         "sensor_type": "binary_sensor",
         "config": {
-            "device_class": "None",
             "name": "Misc Reserved 8",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
@@ -615,7 +611,6 @@ radian_mappings = {
         "object_id": "inv_misc_aux_enabled",
         "sensor_type": "binary_sensor",
         "config": {
-            "device_class": "None",
             "name": "Misc Aux Relay Enabled",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
@@ -626,7 +621,6 @@ radian_mappings = {
         "object_id": "inv_misc_relay_enabled",
         "sensor_type": "binary_sensor",
         "config": {
-            "device_class": "None",
             "name": "Misc Relay Enabled",
             "value_template": "{%if value == '1' %} ON {% else %} OFF {% endif %}",
             "entity_category": "diagnostic",
