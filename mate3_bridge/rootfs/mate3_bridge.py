@@ -642,7 +642,7 @@ radian_mappings = {
         "config": {
             "device_class": "enum",
             "name": "Misc AC Select",
-            "value_template": "{%if value == '1' %} "AC 1 Selected" {% else %} "AC 2 Selected" {% endif %}",
+            "value_template": "{{ value }}",
             "entity_category": "diagnostic",
             "options": ["AC 1 Selected", "AC 2 Selected"],
         }
@@ -654,7 +654,7 @@ radian_mappings = {
         "config": {
             "device_class": "enum",
             "name": "Misc Voltage Mode",
-            "value_template": "{%if value == '1' %} "240 VAC Mode" {% else %} "120 VAC Mode" {% endif %}",
+            "value_template": "{{ value }}",
             "entity_category": "diagnostic",
             "options": ["240 VAC Mode", "120 VAC Mode"],
         }
@@ -810,6 +810,20 @@ def radianMiscConv(misc):
 
     return ", ".join(misc)
 
+def radianMiscACConv(ac):
+    tmp_misc = int(ac)
+    if tmp_misc & 0b01000000:
+        return "AC 2 Selected"
+    else:
+        return "AC 1 Selected"
+
+def radianMiscModeConv(mode):
+    tmp_misc = int(mode)
+    if tmp_misc & 0b10000000:
+        return "240 VAC Mode"
+    else:
+        return "120 VAC Mode"
+
 def radianWarningConv(warn):
     tmp_warn = int(warn)
     warn = []
@@ -948,8 +962,8 @@ def radianProcessData(data, mac):
     mqttc.publish(path +"/inv_misc_res_8", int(int(data[20]) & 0b00001000))
     mqttc.publish(path +"/inv_misc_aux_enabled", int(int(data[20]) & 0b00010000))
     mqttc.publish(path +"/inv_misc_relay_enabled", int(int(data[20]) & 0b00100000))
-    mqttc.publish(path +"/inv_misc_ac_select", int(int(data[20]) & 0b01000000))
-    mqttc.publish(path +"/inv_misc_volt_mode", int(int(data[20]) & 0b10000000))
+    mqttc.publish(path +"/inv_misc_ac_select", radianMiscACConv(data[20]))
+    mqttc.publish(path +"/inv_misc_volt_mode", radianMiscModeConv(data[20]))
 
 MQTT_TLS = False
 MQTT_PREFIX = "mate3"
