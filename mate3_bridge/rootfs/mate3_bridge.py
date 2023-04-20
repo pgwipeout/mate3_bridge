@@ -47,6 +47,14 @@ radian_keys = {
     "l2_chg_w",
     "l2_buy_w",
     "l2_sell_w",
+
+    "inv_err_ac_low",
+    "inv_err_stack",
+    "inv_err_overtemp",
+    "inv_err_batt_low",
+    "inv_err_comm",
+    "inv_err_batt_high",
+    "inv_err_backfeed",
 }
 
 radian_mappings = {
