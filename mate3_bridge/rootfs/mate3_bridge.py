@@ -992,19 +992,23 @@ def radian_bridge():
             except:
                 logging.info("Forwarding connection failed")
 
-        data = "% s" % data
-        mac = data.split('[')[1]
-        mac = mac.split(']')[0]
-        data = data.split('<')[1]
-        data = data.split('>')[0]
-        data = data.split(',')
-        data = [name.strip() for name in data]
+        try:
+            data = "% s" % data
+            mac = data.split('[')[1]
+            mac = mac.split(']')[0]
+            data = data.split('<')[1]
+            data = data.split('>')[0]
+            data = data.split(',')
+            data = [name.strip() for name in data]
 
 		# Devtype 6 is for a Radian inverter, no other device is supported at this time.
-        if data[1] == "6":
-            radianProcessData(data, mac)
-        else:
-            logging.error("Unsupported Device Type: %s" %data[1])
+            if data[1] == "6":
+                radianProcessData(data, mac)
+            else:
+                logging.error("Unsupported Device Type: %s" %data[1])
+
+        except:
+            logging.error("Parse initial data packet exception.")
 
 def run():
     """Run main"""

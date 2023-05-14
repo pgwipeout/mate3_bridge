@@ -1,10 +1,7 @@
-# Home Assistant Add-on: Example add-on
+# Home Assistant Add-on: Mate 3 UDP Bridge
 
 ## How to use
 
-This add-on really does nothing. It is just an example.
+This addon parses the UDP data stream from a Mate3 inverter monitor and send it to MQTT. It currently supports all data from a Radian inverter.
 
-When started it will print the configured message or "Hello world" in the log.
-
-It will also print "All done!" in `/share/example_addon_output.txt` to show
-simple example of the usage of `map` in addon config.
+To use, enable the addon, configure the MQTT service, and set the Mate3 data stream IP address to the public IP address of the Home Assistant instance.

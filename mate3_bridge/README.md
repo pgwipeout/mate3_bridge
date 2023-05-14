@@ -1,6 +1,6 @@
-# Home Assistant Add-on: Example add-on
+# Home Assistant Add-on: Mate 3 UDP Bridge
 
-_Example add-on to use as a blueprint for new add-ons._
+_Mate3 UDP Data Stream Addon._
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
