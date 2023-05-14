@@ -681,7 +681,7 @@ def publish_config(port, device, uuid, mappings, keys):
         config["device"] = { "identifiers": device, "name": device, "model": device, "manufacturer": "Outback Power" }
         logging.debug(path + ":" + json.dumps(config))
 
-        mqttc.publish(path, json.dumps(config), retain=True)
+        mqttc.publish(path, json.dumps(config), retain=False)
 
     registered_devices[uuid] = time.time() + 600
 

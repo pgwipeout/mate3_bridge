@@ -1,15 +1,25 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## 1.2.0
+## 0.2.6
 
-- Add an apparmor profile
-- Update to 3.15 base image with s6 v3
-- Add a sample script to run as service and constrain in aa profile
+- Add changelog, disable MQTT retention.
 
-## 1.1.0
+## 0.2.5
 
-- Updates
+- Enable parse error handling and update documents
 
-## 1.0.0
+## 0.2.4
+
+- Enable misc and warnings as binary sensors
+
+## 0.1.9
+
+- Enable errors as binary sensors
+
+## 0.1.1
+
+- Add Relay capability
+
+## 0.1.0
 
 - Initial release
