@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 0.2.7
+
+- Fix l2 voltage input.
+
 ## 0.2.6
 
 - Add changelog, disable MQTT retention.

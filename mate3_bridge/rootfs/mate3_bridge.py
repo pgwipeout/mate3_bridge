@@ -210,7 +210,7 @@ radian_mappings = {
         "object_id": "l2_grid_input_v",
         "sensor_type": "sensor",
         "config": {
-            "device_class": "current",
+            "device_class": "voltage",
             "name": "L2 Grid Voltage",
             "unit_of_measurement": "V",
             "value_template": "{{ value }}",
